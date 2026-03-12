@@ -322,15 +322,15 @@ export default function App() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200 group"
                 >
-                  <div className="relative h-[280px] sm:h-[400px] overflow-hidden">
+                  <div className="relative aspect-square sm:aspect-auto sm:h-[400px] overflow-hidden bg-slate-50 p-4 sm:p-0">
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className="w-full h-full object-cover bg-slate-100 group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-contain sm:object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply sm:mix-blend-normal"
                       style={{ objectPosition: product.objectPosition || 'center' }}
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 z-10">
                       <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
                         product.type === '냉동고' ? 'bg-blue-600 text-white' : 'bg-emerald-600 text-white'
                       }`}>
