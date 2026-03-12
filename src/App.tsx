@@ -322,12 +322,11 @@ export default function App() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200 group"
                 >
-                  <div className="relative aspect-square sm:aspect-auto sm:h-[400px] overflow-hidden bg-slate-50 p-4 sm:p-0">
+                  <div className="relative h-[260px] sm:h-[320px] bg-slate-50 p-6 flex items-center justify-center overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className="w-full h-full object-contain sm:object-cover group-hover:scale-105 transition-transform duration-500 mix-blend-multiply sm:mix-blend-normal"
-                      style={{ objectPosition: product.objectPosition || 'center' }}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 left-4 z-10">
